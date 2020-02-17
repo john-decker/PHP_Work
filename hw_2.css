@@ -1,0 +1,121 @@
+
+body{
+	background-color: #d1e0e0;
+}
+
+img {
+	border-radius: 100%;
+	height: 80px;
+}
+
+div.isbn{
+	padding: 20px;
+	background-color: #ccffff;
+	outline-style: solid;
+	outline-color: #004d4d;
+	width: 600px;
+}
+
+div.isbn_head{
+	padding: 10px;
+	background-color: #ccffff;
+	width: 500px;
+}
+
+div.isbn_link{
+	padding: 10px;					
+	background-color: #ccffff;
+	width: 500px;
+}
+
+div.isbn_alert{
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #ffff66
+;
+	margin-bottom: 5px;
+	width: 500px;
+}
+
+div.isbn_cannot_verify {
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #bf0040;
+	margin-bottom: 5px;
+	width: 500px;
+}
+
+div.isbn_message{
+	padding: 20px;
+	background-color: #1affff;
+	margin-bottom: 20px;
+	outline-style: solid;
+	outline-color: #004d4d;
+	width: 500px;
+}
+
+div.isbn_message_negative{
+	padding: 20px;
+	background-color: #ffff66;
+	margin-bottom: 20px;
+	outline-style: solid;
+	outline-color: #004d4d;
+	width: 500px;
+}
+
+div.random_flip{
+	padding: 20px;
+	outline-style: solid;
+	background-color: #e6ffff;
+	width: 740px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.two_heads{
+	padding: 20px;
+	background-color: #ffbf00;
+	outline-style: solid;
+	outline-width: 2px.
+	min-width: 50;
+	max-width: 740px;
+}
+
+div.odd_number_flip{
+	width: 750px;
+	background-color: #f2f2f2;
+	outline-style: solid;
+	outline-width: 2px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+div.odd_number_flip_head{
+	width: 800px;
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+h3 {
+	padding-left: 30px;
+}
+
+button{
+	background-color: #ffcc33;
+}
+
+td.inner{
+	outline-style: solid;
+	outline-width: 1px;
+	background-color: #e6ffff;
+}
+
+td.title{
+	padding-right: 110px;
+}
+
+

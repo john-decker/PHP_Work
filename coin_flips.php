@@ -19,8 +19,8 @@
 				echo"</tr>";
 				echo"<tr>";
 					echo"<td class = 'title'><h2>Coin Flip Generator</h2></td>";
-					echo"<td class = 'inner'><image src='moai.png'></td>";
-					echo"<td class = 'inner'><image src='tails.png'></td>";
+					echo"<td class = 'inner'><image src='moai.png' alt='heads'></td>";
+					echo"<td class = 'inner'><image src='tails.png' alt = 'tails'></td>";
 				echo"</tr>";
 			echo"</table>";
 			echo"</div>";
@@ -62,8 +62,9 @@
 			//tosses a virtual coin until it reaches 2 in a row
 			//could use a while loop with condition set to wile $head_counter != 2 but chose a self-refreshing loop instead
 			echo"<div class = 'two_heads'>";
-			$heads="moai.png";
-			$tails="tails.png";
+			$tails = "tails.png alt='tails'";
+			$heads = "moai.png alt='heads'";
+			# make stop_number a valid user generated number
 			$cycles = 10;
 			$stop_number = 2;
 			$head_counter = 0;
@@ -107,8 +108,8 @@
 
 			//simulates a single trial flip of a coin, returns the string "heads" or "tails";
 			function single_trial(){
-				$tails = "tails.png";
-				$heads = "moai.png";
+				$tails = "tails.png alt='tails'";
+				$heads = "moai.png alt='heads'";
 				$coin_side = toss_it();
 
 				if($coin_side=="heads"){

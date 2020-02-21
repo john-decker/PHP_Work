@@ -13,7 +13,7 @@
 		<form action ="" method="GET">
 			Enter number of heads to try for (whole numbers only)
 			<input name="number" type ="text">
-			<input name="submit" value="submit" type="submit"><
+			<input name="submit" value="submit" type="submit"> 
 		</form>
 
 		<?php 

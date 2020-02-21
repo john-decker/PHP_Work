@@ -31,6 +31,12 @@
 			$input = 0;
 		}
 
+		else if(($_GET["number"]) <0){
+			echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be positive. Please try again.</div>";
+			$input = 0;
+		}
+
+
 		# set relative path to image files
 		$tails = "tails.png alt='tails'";
 		$heads = "moai.png alt='heads'";

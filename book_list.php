@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Book List</title>
-		
-		<!--can eventually be moved to an extrnal sheet-->
 		<style>
 			body{
 				background-color: #221a11;
@@ -96,15 +94,14 @@
 		# check to ensure that book array can be altered and still output correctly
 		# array_push($list_of_books2, array("Persepolis Rising", "James S.A. Corey", 512, "paperback", 18.95));
 		
-		echo"<table>";
-				# write out headers for table
-				echo"<tr>";
-				echo write_td("Title", 'head');
-				echo write_td("Author", 'head');
-				echo write_td("Number Pages", 'head');
-				echo write_td("Type", 'head');
-				echo write_td("Price", 'head');
-				echo"</tr>";
+		$column_heads = array("Title", "Author", "Number Pages", "Type", "Price");
+			# write out headers for table
+			echo"<table>";
+				foreach($column_heads as $head){
+					echo write_td($head, "head");
+			}
+			echo"</tr>";
+
 
 				# traverse book array and output results
 				# eventually make this user-input to output a subset of books

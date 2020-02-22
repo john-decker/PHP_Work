@@ -20,21 +20,38 @@
 		# test to see if input has been set
 		if((isset($_GET["number"]))){
 			$input = $_GET["number"];
+			# test to see if number is a float by testing difference (ugly but it works pretty reliably)
+			$input_test = gettype($input);
+			$input_valid = round($input);
+			if($input != $input_valid){
+				echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be a whole number. Please try again.</div>";
+				# could eventually use the rounded verison and pass through as a "friendly fail"
+				$input = 0;
+			}
+
+			# test to see if number is negative
+			else if($input <0){
+				echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be positive. Please try again.</div>";
+				$input = 0;
+			}
 		}
 
 		else{
 			$input = 0;
 		}
+		
 		# test to see if the input is numeric, give an error output and set to 0
 		if(!is_numeric($input)){
 			echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not a valid number. Please try again.</div>";
 			$input = 0;
 		}
 
-		else if(($_GET["number"]) <0){
-			echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be positive. Please try again.</div>";
-			$input = 0;
-		}
+		# test to see if number is a float does not work, move to initial check
+
+		// if(filter_var($input, FILTER_VALIDATE_FLOAT) === true){
+		// 	$input = 0;
+		// 	echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be a whole number. Please try again.</div>";
+		// }
 
 
 		# set relative path to image files

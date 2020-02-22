@@ -21,7 +21,6 @@
 		if((isset($_GET["number"]))){
 			$input = $_GET["number"];
 			# test to see if number is a float by testing difference (ugly but it works pretty reliably)
-			$input_test = gettype($input);
 			$input_valid = round($input);
 			if($input != $input_valid){
 				echo"<div class = 'isbn_cannot_verify'>I'm sorry, $input is not valid. Your number should be a whole number. Please try again.</div>";

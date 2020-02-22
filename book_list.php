@@ -97,10 +97,11 @@
 		$column_heads = array("Title", "Author", "Number Pages", "Type", "Price");
 			# write out headers for table
 			echo"<table>";
-				foreach($column_heads as $head){
-					echo write_td($head, "head");
-			}
-			echo"</tr>";
+				echo"<tr>";
+					foreach($column_heads as $head){
+						echo write_td($head, "head");
+				}
+				echo"</tr>";
 
 
 				# traverse book array and output results

@@ -5,7 +5,7 @@
 		<title>two_dice_with_odds</title>
 
 		<!-- <form action ="" method="GET">
-			Enter a number just because
+			Enter a number of sides (whole numbers)
 			<input name="number" type ="text">
 			<input name="submit" value="submit" type="submit">
 		</form> -->
@@ -53,11 +53,14 @@
 		$die2 = 8;
 		$roll_total = 0;
 		$number_counter = 0;
+		# randomly roll a number achievable by the combination of dice
 		$rand_num = random_int(2, ($die1+$die2));
 		$roll_number = $rand_num;
+
+		#print table
 		echo"<table>";
 		echo"<td class = 'top'>[X]</td>";
-		// for($h=0; $h<count($top_array); ++$h){
+		
 		for($h=1; $h<=$die2; ++$h){
 			echo"<td class='top'>"; 
 			echo $h;
@@ -85,6 +88,7 @@
 		}
 		echo"</table>";
 
+		#calculate final odds
 		$odds = ($number_counter/($die1*$die2)*100);
 		$display_odds = round($odds,2);
 

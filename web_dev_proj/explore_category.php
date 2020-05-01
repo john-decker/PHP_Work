@@ -1,19 +1,15 @@
 <?php
 session_start();
 
-//doesn't work - goes straight to "oops"
-
 if(isset($_GET['category_id'])){
 	$category = $_GET['category_id'];
 	$heading = strtoupper($_GET['category_id']); 
 }
 
 else{
-	$category = "oops";
+	$category = "Oops, something went wrong!";
 }
 
-//perhaps final statement in case page was opened somehow without going through landing page?
-//would need to use isset for the daily category
 
 ?>
 
@@ -60,9 +56,7 @@ else{
 				$image_link_stub = "images/" . $entry[3] . ".jpg";
 				$caption = $creator_last . ", " . $title . ", " . $period . ".";
 				$search_text = urlencode($entry[1]);
-				// echo "<a href = https://www.google.com/search?q=" . $search_text ." target=\"_blank\">$title</a><br />";
-					explore_display($image_link_stub, $caption, $search_text);
-
+				
 			}
 			echo"</div>";
 		echo "</div>";

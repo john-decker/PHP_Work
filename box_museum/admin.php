@@ -39,7 +39,7 @@ session_start();
 				$query3 = "SELECT geog_reg_id, geog_reg_name FROM geographical_region";
 				$query4 = "SELECT orig_repos_id, orig_repos_name FROM original_repository";
 				$query5 = "SELECT creator_id, creator_Lname FROM creator ORDER BY creator_id DESC";
-				$query6 = "SELECT object_id, title FROM object ORDER BY object_id DESC LIMIT 200 ROWS EXAMINED 1000";
+				$query6 = "SELECT object_id, title FROM object ORDER BY object_id DESC";
 					admin_creator_form();
 					admin_object_form($conn, $query3, $query4);
 					admin_theme_form($conn2, $query2, $query6);

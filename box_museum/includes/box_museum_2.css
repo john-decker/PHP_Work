@@ -2,29 +2,17 @@
 	box-sizing: border-box;
 }
 
-/*.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}*/
-
 body{
 	background-color: #2f3337;
 }
 
+/*main container for flexible layout*/
 .col-container {
   display: flex;
   width: 100%;
 }
 
-/*div*/
+/*divs for header*/
 .head {
   height: auto;
   display: block;
@@ -33,7 +21,7 @@ body{
   padding: 15px;
   border-style: groove;
   text-align: center;
-  background-image: url('time_image.jpg');
+  background-image: url('../images/time_image.jpg');
   /*background-repeat: no-repeat;*/
   background-size: auto;
 
@@ -49,7 +37,7 @@ body{
 	color: white;
 	text-shadow: 2px 2px black;
 	text-align: center;
-	background-image: url('museum_boxes_music.jpg');
+	background-image: url('../images/museum_boxes_music.jpg');
 	/*background-repeat: no-repeat;*/
 	background-size: auto;
 
@@ -64,13 +52,14 @@ body{
   padding: 15px;
   border-style: groove;
   text-align: center;
-  background-image: url('museum_boxes_banner.jpg');
+  background-image: url('../images/museum_boxes_banner.jpg');
   /*background-repeat: no-repeat;*/
   background-size: auto;
 
 }
 
 
+/*NOT CURRENTLY USED -- CONSIDER DELETING*/
 .head3 {
   height: auto;
   display: block;
@@ -83,8 +72,7 @@ body{
   background-color: #888844;
   color: #ffe6cc;
   text-shadow: 2px 2px #1a0d00;
-  background-image: url('museum_boxes_texture.jpg');
- /* background-repeat: no-repeat;*/
+  background-image: url('../images/museum_boxes_texture.jpg');
   background-size: auto;
 }
 
@@ -100,44 +88,17 @@ body{
 	border-style: groove;
 }
 
-.left{
+.head5{
 	height: auto;
 	display: block;
-	width: 75%;
-	float: left;
+	width: 23%;
+	padding: 15px;
+	background-color: #888844;
+	color: #ffe6cc;
+	text-align: center;
 }
 
-.right{
-	height: auto;
-	display: block;
-	padding-top: 5;
-	color: #bbbfc4;
-	width: 25%;
-	float: right;
-}
-
-.side_bar{
-	width: auto;
-	padding: 10px;
-}
-
-.bibliography{
-	margin-left: 8%;
-	margin-right: 8%;
-	padding: 20px;
-	color: white;
-	background-color: #6b727b;
-}
-
-.tech_specs{
-	margin-left: 8%;
-	margin-right: 8%;
-	margin-top: 8%;
-	padding: 20px;
-	color: white;
-	background-color: #6b727b;
-}
-
+/*divs for footer*/
 .foot{
 	height: auto;
 	display: flex;
@@ -193,13 +154,55 @@ body{
 	display: none;
 }
 
-/*for simple pop-up*/  
+/*for simple pop-up used in footer*/  
 span:hover + .foot_info {
   display: block;
   margin-top: -42%;
   text-decoration: none;
 }
 
+.left{
+	height: auto;
+	display: block;
+	width: 75%;
+	float: left;
+}
+
+/*divs for user pages*/
+.right{
+	height: auto;
+	display: block;
+	color: white;
+	width: 25%;
+	float: right;
+	/*background-image: linear-gradient(rgba(47, 51, 55, 0.9), rgba(47, 51, 55, 0.1));*/
+	background-color: rbg(47, 51, 55);
+	overflow: scroll;
+}
+
+.side_bar{
+	padding: 15px;
+	color: white;
+}
+
+/*.bibliography{
+	width: auto: ;
+	margin-left: 8%;
+	margin-right: 8%;
+	color: white;
+	background-color: #6b727b;
+}*/
+
+/*.tech_specs{
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: 8%;
+	padding: 20px;
+	color: white;
+	background-color: #6b727b;
+}*/
+
+/*divs for incorrect login page*/
 .wrong_id1{
 	width: 50%;
 	height: 60%;
@@ -211,7 +214,7 @@ span:hover + .foot_info {
 	text-align: center;
 	vertical-align: center;
 	/*gradient supported*/
-	background-image: linear-gradient(-45deg, rgba(188, 185, 143, 0.4), rgba(143, 139, 86, 0.0));
+	background-image: linear-gradient(-45deg, rgba(143, 139, 86, 0.0), rgba(188, 185, 143, 0.4));
 	/*gradient no supported*/
 	background-color: rgba(128, 123, 77, 0.2);
 	color: #f5f5ef;
@@ -234,6 +237,53 @@ span:hover + .foot_info {
 	color: #f5f5ef;
 }
 
+.admin_left{
+	width: 50%;
+	height: auto;
+	min-height: 60%;
+	border-style: outset;
+	border-color: silver;
+	float: left;
+	padding: 10px;
+	display: table-column;
+	/*gradient supported*/
+	background-image: linear-gradient(-45deg, rgba(188, 185, 143, 0.4), rgba(143, 139, 86, 0.0));
+	/*gradient no supported*/
+	background-color: rgba(128, 123, 77, 0.2);
+	color: #f5f5ef;
+}
+
+.admin_right{
+	width: 50%;
+	height: auto;
+	min-height: 60%;
+	border-style: outset;
+	border-color: silver;
+	float: left;
+	padding: 10px;
+	display: table-column;
+	text-align: left;
+	vertical-align: center;
+	/*gradient supported*/
+	background-image: linear-gradient(-45deg, rgba(143, 139, 86, 0.0), rgba(188, 185, 143, 0.4));
+	/*gradient no supported*/
+	background-color: rgba(128, 123, 77, 0.2);
+	color: #f5f5ef;
+}
+
+.pseudo_terminal{
+	width: 85%;
+	height: auto;
+	min-height: 25%;
+	font-size: 80%;
+	color: white;
+	padding: 30px;
+	margin: 8%;
+	background-color: black;
+	border-style: inset;
+}
+
+/*divs for image output in gallery spaces*/
 .catgory_image{
 	float: left;
 	margin-right:15px;
@@ -252,10 +302,13 @@ span:hover + .foot_info {
 .cat_gallery_large{
 	display: flex;
 	width: 50%;
-	padding: 10px;
-	background-color: #2f3337;
+	/*max-width: 63%;*/
+	/*min-width: 50%*/
+	/*max-width: 50%;*/
 	height: auto;
 	float: left;
+	padding: 10px;
+	background-color: #2f3337;
 	border-style: groove;
 }
 
@@ -280,10 +333,25 @@ span:hover + .foot_info {
 /*uses table display to output from db*/
 .user_gallery_display{
 	height: auto;
-	width: auto;
+	/*width: auto;*/
+	width: 100%;
 	display: inline-table;
 	/*display: inline-flex;
 */}
+
+.simple_display{
+	width: 80%;
+	height: auto;
+	margin: 10%;
+}
+
+/*.user_gallery_display_large{
+	max-height: 300px;
+	width: auto;
+	display: inline-table;
+	overflow: scroll;
+	/*display: inline-flex;
+*/}*/
 
 .gallery_long_text{
 	padding: 20px;
@@ -295,10 +363,34 @@ span:hover + .foot_info {
 	background-color: rgba(128, 123, 77, 0.2);
 }
 
+.gallery_long_text2{
+	padding: 20px;
+	color: white;
+	padding: 2% 20% 5% 20%;
+	/*gradient supported*/
+	background-image: linear-gradient(rgba(128, 123, 77, 0.4), rgba(128, 123, 77, 0.0));
+	/*gradient no supported*/
+	background-color: rgba(128, 123, 77, 0.2);
+}
+
+/*div for generic alert*/
+.alert{
+	height: auto;
+	display: block;
+	width: 46%;
+	float: left;
+
+}
+
+
 button.info{
 	text-decoration: none;
 	color: white;
 	background-color: #6b727b;
+}
+
+ul.tips{
+	color: white;
 }
 
 /*text styling*/
@@ -342,8 +434,16 @@ p.gallery_text{
 }
 
 p.login_error_msg{
+	padding: 5px;
 	color: white;
 	background-color: red;
+}
+
+p.login_error_msg2{
+	padding: 5px;
+	color: white;
+	background-image: linear-gradient(rgba(128, 123, 77, 0.4), rgba(128, 123, 77, 0.0));
+
 }
 
 a.info{
